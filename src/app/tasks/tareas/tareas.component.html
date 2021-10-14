@@ -1,0 +1,17 @@
+<div class="contenedor-todos">
+
+    <div class="contenedor-todo" *ngFor="let todo of todos; let idx=index">
+        <div class="check" (click)="tareaTerminada( todo )">
+            <i *ngIf="!todo.terminada" class="far fa-check-circle"></i>
+            <i *ngIf="todo.terminada" class="fas fa-check-circle"></i>
+        </div>
+        <div class="todo" [ngClass]="{'terminado': todo.terminada}">
+            <h3 class="todo-titulo">{{ todo.titulo }}</h3>
+            <p class="todo-desc">{{ todo.desc }}</p>
+        </div>
+        <div class="botones" (click)="eliminarTodo( idx )">
+            <i class="far fa-trash-alt"></i>
+        </div>
+    </div>
+
+</div>

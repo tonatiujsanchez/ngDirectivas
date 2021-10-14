@@ -1,0 +1,14 @@
+<table style="text-align: center;">
+    <thead>
+        <tr>
+            <th>Nobre</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let personaje of personajes">
+            <td>{{ personaje.nombre }}</td>    
+            <td>{{ personaje.edad }}</td>    
+        </tr>
+    </tbody>
+</table>

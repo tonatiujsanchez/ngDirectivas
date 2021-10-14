@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Directivas';
+  
+  propiedadesParrafo: any;
+  color:string;
+  size:number = 25;
+
+  constructor(){
+    this.propiedadesParrafo = {
+      color: 'red',
+      fontSize: `${this.size}px`,
+      textAlign: 'center'
+    }
+  }
+
+  carbiarColor(color: string){
+    this.propiedadesParrafo.color = color;
+    this.color = '#FFF';
+  }
+
+  cambiarTamano(e){
+
+    this.propiedadesParrafo.fontSize = `${ e.target.value }px`
+    
+  }
+
 }

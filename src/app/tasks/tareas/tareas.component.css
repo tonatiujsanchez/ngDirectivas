@@ -1,0 +1,39 @@
+.contenedor-todo{
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    border: solid 1px #CECECE;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+.check{
+    grid-column: 1 / 2;
+    cursor: pointer;
+}
+.todo{
+    grid-column: 2 / 20;
+    margin: 0 5px;
+}
+.botones{
+    grid-column: 20 / 21;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+.contenedor-todo .check i{
+    font-size: 20px;
+}
+.contenedor-todo .check .fas{
+    color: #009700;
+}
+
+.contenedor-todo .todo .todo-titulo{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.contenedor-todo .todo.terminado{
+    text-decoration: line-through;
+    color: #5a5a5a;
+}
+

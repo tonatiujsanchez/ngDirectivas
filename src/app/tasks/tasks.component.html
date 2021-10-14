@@ -1,0 +1,7 @@
+<div class="tasks">
+    <div class="contenedor-tasks">
+        <h1>Todo list</h1>
+        <app-formulario (enviarTodo)="agregarTodo($event)" ></app-formulario>
+        <app-tareas [todos]="todos" ></app-tareas>
+    </div>
+</div>

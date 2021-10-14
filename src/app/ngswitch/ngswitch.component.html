@@ -1,0 +1,25 @@
+<div [ngSwitch]="opcionNumero">
+    <p *ngSwitchCase="1">Opcion 1</p>
+    <p *ngSwitchCase="2">Opcion 2</p>
+    <p *ngSwitchCase="3">Opcion 3</p>
+    <p *ngSwitchCase="4">Opcion 4</p>
+    <p *ngSwitchCase="5">Opcion 5</p>
+    <p *ngSwitchDefault>Opcion por defecto</p>
+</div>
+
+<!-- <div class="botones">
+    <button (click)="cambiar(1)" class="btn mr-2">1</button>
+    <button (click)="cambiar(2)" class="btn mr-2">2</button>
+    <button (click)="cambiar(3)" class="btn mr-2">3</button>
+    <button (click)="cambiar(4)" class="btn mr-2">4</button>
+    <button (click)="cambiar(5)" class="btn mr-2">5</button>
+    <button (click)="cambiar(0)" class="btn mr-2">Default</button>
+</div> -->
+
+<div class="botones">
+    <button *ngFor="let b of arrBtn; let idx=index"
+            (click)="cambiar(idx+1)" 
+            class="btn mr-2">{{ idx+1 }} </button>
+    <button (click)="cambiar(0)" class="btn mr-2">Default</button>
+</div>
+

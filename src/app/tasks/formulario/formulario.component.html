@@ -1,0 +1,14 @@
+<div class="formulario">
+    <input class="titulo"
+            type="text" 
+            placeholder="Todo" 
+            [(ngModel)]="todo.titulo" 
+            (keyup.enter)="agregarTodo()">
+
+    <textarea class="desc" 
+            placeholder="Descripción" 
+            [(ngModel)]="todo.desc"
+            (keyup.enter)="agregarTodo()">
+    </textarea>
+</div>
+
